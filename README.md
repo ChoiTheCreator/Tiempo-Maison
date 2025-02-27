@@ -2,8 +2,7 @@
 
 ## 📌 프로젝트 개요 (vite + JS + emotion -> Next + TS +TailWind)
 
-이 레포지토리는 **Next.js + TypeScript + TailwindCSS** 환경에 적응하면서 학습
-아이고 ㅠ;
+이 레포지토리는 **Next.js + TypeScript + TailwindCSS** 환경 적응기록
 
 ## 📂 기술 스택
 
