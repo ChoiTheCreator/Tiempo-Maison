@@ -1,15 +1,31 @@
 'use client';
 import Link from 'next/link';
+import Header from './components/Header';
+
+import Button from './components/Button';
+import Footer from './components/Footer';
+import { Playfair_Display } from 'next/font/google';
+
+const playfair = Playfair_Display({ subsets: ['latin'], weight: '800' });
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold mb-6">취향 전시 박물관</h1>
-      <Link href="/main">
-        <button className="px-6 py-3 text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition">
-          시작하기
-        </button>
-      </Link>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-black">
+      <Header />
+      <div className="text-center space-y-6">
+        <h1
+          className={`${playfair.className} text-7xl font-black tracking-tight`}
+        >
+          WONBIN CHOI
+        </h1>
+
+        <Link href={'/login'}>
+          <div className="flex justify-center mt-10">
+            <Button text="Who U?"></Button>{' '}
+          </div>
+        </Link>
+      </div>
+      <Footer />
     </div>
   );
 }

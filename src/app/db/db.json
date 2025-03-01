@@ -1,19 +1,6 @@
 {
-  "users": [
-    {
-      "id": "1",
-      "username": "admin",
-      "password": "1234"
-    },
-    {
-      "id": "2",
-      "username": "testuser",
-      "password": "password"
-    },
-    {
-      "id": "234c",
-      "username": "wonbin109",
-      "password": "ww001009!"
-    }
+  "keys": [
+    { "authKey": "DEV-12345", "password": "securepass" },
+    { "authKey": "DEV-67890", "password": "anotherpass" }
   ]
 }
