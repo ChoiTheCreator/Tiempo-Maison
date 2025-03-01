@@ -1,7 +1,12 @@
 'use client';
 
-//thanks to NEXT,
+import { Playfair_Display } from 'next/font/google';
+import { Anton } from 'next/font/google';
 import Image from 'next/image';
+
+const playfair = Playfair_Display({ subsets: ['latin'], weight: '800' });
+const anton = Anton({ subsets: ['latin'], weight: '400' });
+
 const Page = () => {
   return (
     <div className="fixed top-0 left-0 w-screen h-screen flex bg-white">
@@ -9,13 +14,15 @@ const Page = () => {
       <div className="w-2/3 flex flex-col justify-between p-20">
         {/* 타이틀 영역 */}
         <div>
-          <h1 className="text-[12vw] font-extrabold leading-none tracking-tighter">
+          <h1
+            className={`${playfair.className} text-[12vw] font-black leading-none tracking-tighter`}
+          >
             TASTE
             <br />
             Museum
           </h1>
-          <p className="mt-8 text-gray-600 text-2xl">
-            당신의 취향을 전시하세요.
+          <p className={`${anton.className} mt-8 text-gray-600 text-2xl`}>
+            Describe yourself
           </p>
         </div>
 
@@ -27,7 +34,7 @@ const Page = () => {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-gray-700">ABOUT WHAT </h2>
+            <h2 className="text-lg font-semibold text-gray-700">ABOUT WHAT</h2>
             <p className="text-xl text-gray-500">
               내 취향을 정리하고 전시하는 공간.
             </p>
@@ -38,12 +45,12 @@ const Page = () => {
       {/* 오른쪽 이미지 영역 */}
       <div className="w-1/2 relative">
         <Image
-          src="/IMG/beauty.jpg"
+          src="/IMG/beauty.jpg" // ⚠️ 이미지 경로 확인
           alt="personal"
           layout="fill"
           objectFit="cover"
           quality={100}
-        ></Image>
+        />
       </div>
     </div>
   );
