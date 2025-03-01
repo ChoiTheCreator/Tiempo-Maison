@@ -52,7 +52,7 @@ const RegisterModal = ({ isOpen, onClose }: RegisterModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-opacity-20">
+    <div className="fixed inset-0 flex items-center justify-center bg-transparent bg-opacity-20">
       <div className="bg-white p-8 rounded-lg shadow-xl w-96 relative">
         <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">
           회원가입
@@ -75,7 +75,7 @@ const RegisterModal = ({ isOpen, onClose }: RegisterModalProps) => {
         </div>
 
         {/* 가입하기 버튼 */}
-        <div className="mt-6">
+        <div className="mt-6 flex justify-center">
           <Button text="가입하기" onClick={handleRegister} />
         </div>
 

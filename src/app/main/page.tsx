@@ -13,7 +13,9 @@ const MainPage = () => {
         <h1 className="text-4xl font-bold">당신의 취향을 전시하세요</h1>
         <p className="text-lg text-gray-600"> 나만의 전시관을 만들어보세요</p>
         <Link href={'/login'}>
-          <Button text="로그인"></Button>{' '}
+          <div className="flex justify-center">
+            <Button text="로그인"></Button>{' '}
+          </div>
         </Link>
       </div>
       <Footer />
