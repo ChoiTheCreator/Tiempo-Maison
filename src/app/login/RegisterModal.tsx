@@ -44,6 +44,7 @@ const RegisterModal = ({ isOpen, onClose }: RegisterModalProps) => {
       setMessage('✅ 회원가입 성공!');
       setTimeout(onClose, 1500);
     } catch (error) {
+      console.log(error);
       setMessage('❌ 서버 오류 발생');
     }
   };
@@ -51,7 +52,7 @@ const RegisterModal = ({ isOpen, onClose }: RegisterModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20">
+    <div className="fixed inset-0 flex items-center justify-center bg-opacity-20">
       <div className="bg-white p-8 rounded-lg shadow-xl w-96 relative">
         <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">
           회원가입
